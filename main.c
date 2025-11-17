@@ -78,9 +78,10 @@ int main() {
     printf("=========================================================\n");
     uint8_t test_val;
     printf("Nhap vao da thuc dang HEXA (Vi du 0xFB): ");
-    scanf_s("%hhx", &test_val);
+    scanf("%hhx", &test_val);
     uint8_t test_inv = gf_inverse_generator(test_val);
     printf("Nghich dao cua 0x%02X la 0x%02X\n", test_val, test_inv);
     printf("Kiem tra: 0x%02X * 0x%02X = 0x%02X\n", test_val, test_inv, gf_multiply(test_val, test_inv));
     return 0;
+
 }
